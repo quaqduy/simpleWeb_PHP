@@ -2,7 +2,9 @@
 
 class Home extends Controller{
     function viewHome(){
-        $this->model();
+        $model = $this->model("Product");
+        $data = $model->getProducts();
+        $this->view('home',$data);
     }
 
     function viewDetail(){
