@@ -3,8 +3,11 @@
 class Home extends Controller{
     function viewHome(){
         $model = $this->model("Product");
-        $data = $model->getProducts();
-        $this->view('home',$data);
+        $data = [
+            'dataModel'=>$model->getProducts(),
+            'viewContent'=>'home'
+        ];
+        $this->view('layoutHome',$data);
     }
 
     function viewDetail(){

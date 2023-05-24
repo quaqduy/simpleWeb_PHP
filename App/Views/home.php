@@ -1,36 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Home page</h1>
-    <table>
 
-        <tr>
-            <td>ID</td>
-            <td>Product Name</td>
-            <td>Price</td>
-        </tr>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 id='title'>PRODUCTS</h1>
+        </div>
+    </div>
+    <div class="row">
 
-        <?php
-        
-        if(isset($data)){
-            foreach($data as $item){
-                ?>
-                    <tr>
-                        <td><?= $item['id'] ?></td>
-                        <td><?= $item['productName'] ?></td>
-                        <td><?= $item['price'] ?></td>
-                    </tr>
-                <?php
-            }
+    <?php
+    
+    if(isset($data['dataModel'])){
+        foreach($data['dataModel'] as $item){
+            ?>
+                <div class='item--box col-4' >
+                    <div class='item-product' style="height: 350px !important">
+                        <img src="./public/images/airblade.jpeg" alt="">
+                        <div class='idProduct'>ID Product: <?= $item['id'] ?></div>
+                        <div class='nameProduct'>Name Product: <?= $item['productName'] ?></div>
+                        <div class='priceProduct'>Price: <?= $item['price'] ?></div>
+                    </div>
+                </div>
+            <?php
         }
+    }
 
-        ?>
-    </table>
-</body>
-</html>
+    ?>
+
+    </div>
+</div>

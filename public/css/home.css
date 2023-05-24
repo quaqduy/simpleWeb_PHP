@@ -1,0 +1,41 @@
+#title{
+    text-align: center;
+}
+
+.item--box{
+    padding: 2%;
+}
+
+.item-product{
+    background: rgb(51, 51, 51);
+    color:white;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.item-product{
+    display: flex;
+    flex-direction: column;
+    heigth: 500px;
+    padding: 8px ;
+}
+
+
+.item-product:hover{
+    cursor: pointer;    
+}
+
+.item-product div{
+    flex:1;
+}
+
+.item-product img{
+    flex:1;
+    width: 100%;
+    height: 80%;
+    padding : 5%;
+}
+
+.idProduct,.nameProduct,.priceProduct{
+    padding: 0px 15px;
+}
